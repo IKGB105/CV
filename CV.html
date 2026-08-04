@@ -96,10 +96,8 @@
         }
 
         .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
             font-size: 10.5px;
+            overflow: hidden;
         }
 
         .skill-box {
@@ -108,7 +106,13 @@
             border-radius: 3px;
             border-left: 2px solid var(--accent-light);
             box-sizing: border-box;
-            flex: 1 1 calc(50% - 3px);
+            float: left;
+            width: 48%;
+            margin-bottom: 5px;
+        }
+
+        .skill-box:nth-child(odd) {
+            margin-right: 4%;
         }
 
         .skill-label {
@@ -123,8 +127,11 @@
             line-height: 1.4;
         }
 
-        .skill-box-wide {
-            flex-basis: 100%;
+        .skill-box.skill-box-wide {
+            float: none;
+            width: 100%;
+            clear: both;
+            margin-right: 0;
         }
 
         .edu-item {
