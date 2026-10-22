@@ -1,5 +1,5 @@
 \documentclass[10pt]{extarticle}
-\usepackage[letterpaper,margin=0.65in,top=0.5in,bottom=0.45in]{geometry}
+\usepackage[letterpaper,margin=0.65in,top=0.4in,bottom=0.3in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
@@ -124,13 +124,13 @@ still informs how I approach hardware, no longer the main focus.
 \projtitle{Adjustable LM317 Power Supply — SPICE, PCB \& Thermal FEM}
 \projtech{LTspice, KiCad, COMSOL Multiphysics}
 \projlink{https://github.com/IKGB105/LM317-Adjustable-PowerSupply}{IKGB105/LM317-Adjustable-PowerSupply}
-\projdesc{End-to-end power supply design documented as an engineering logbook: LTspice simulation of the adjustable topology, KiCad PCB layout, and a COMSOL thermal FEM study of the regulator's worst-case junction temperature that drove two rounds of heatsink selection. Simulation caught a real 76\,mV arithmetic error in an earlier hand-calculation before it propagated further.}
+\projdesc{End-to-end power supply design documented as an engineering logbook: LTspice simulation of the adjustable topology, KiCad PCB layout, and a COMSOL thermal FEM study of the regulator's worst-case junction temperature that drove two rounds of heatsink selection. Simulation caught a real 76\,mV arithmetic error in an earlier hand-calculation before it propagated further. Companion LM2596 buck converter root-caused its thermal limit to the catch diode, not the regulator.}
 \vspace{1.5pt}
 
-\projtitle{RISC-V CPU Architecture Model}
-\projtech{Python/Amaranth HDL \& Verilog}
-\projlink{https://github.com/IKGB105/RISC-V-CPU-Designs}{IKGB105/RISC-V-CPU-Designs}
-\projdesc{Full instruction decoder, 32-bit ALU, dual-port RegisterFile, and control unit — built first as a Python/Amaranth simulator, then reimplemented in synthesizable Verilog to see it run on real hardware. Debugged datapath and control inconsistencies via waveform analysis (GTKWave) against structured testbenches.}
+\projtitle{IK-Dron --- 5" FPV Racing Drone}
+\projtech{BetaFlight, SpeedyBee F405 V4}
+\projlink{https://github.com/IKGB105/IK-Dron}{IKGB105/IK-Dron}
+\projdesc{Team project: diagnosed and flew a 5" racing drone after its flight controller suffered an unrecoverable hardware failure. Migrated to a SpeedyBee F405 V4 stack on BetaFlight, then root-caused a takeoff failure via the CLI to a propeller/motor-rotation mismatch tripping BetaFlight's runaway-takeoff protection.}
 
 % ---------------- LANGUAGES ----------------
 \cvsection{Languages}
