@@ -85,7 +85,7 @@ still informs how I approach hardware, no longer the main focus.
 \begin{tcolorbox}[colback=boxbg,colframe=boxbg,boxrule=0pt,leftrule=1.4pt,colframe=accent,
   arc=1pt,left=6pt,right=4pt,top=3pt,bottom=3pt,boxsep=0pt]
   {\color{secondary}\bfseries\fontsize{9.5}{9.5}\selectfont Embedded Systems}\par
-  \vspace{1pt}{\fontsize{9.5}{12}\selectfont STM32, FreeRTOS, RFID, ARM Cortex-M4, custom drivers, cross-compiling (ARM GCC toolchain)}
+  \vspace{1pt}{\fontsize{9.5}{12}\selectfont STM32, FreeRTOS, RFID, ARM Cortex-M4, custom drivers, cross-compiling (ARM GCC toolchain), flight-controller debugging (BetaFlight/CLI)}
 \end{tcolorbox}
 \\[6pt]
 \begin{tcolorbox}[colback=boxbg,colframe=boxbg,boxrule=0pt,leftrule=1.4pt,colframe=accent,
@@ -127,10 +127,10 @@ still informs how I approach hardware, no longer the main focus.
 \projdesc{End-to-end power supply design documented as an engineering logbook: LTspice simulation of the adjustable topology, KiCad PCB layout, and a COMSOL thermal FEM study of the regulator's worst-case junction temperature that drove two rounds of heatsink selection. Simulation caught a real 76\,mV arithmetic error in an earlier hand-calculation before it propagated further. Companion LM2596 buck converter root-caused its thermal limit to the catch diode, not the regulator.}
 \vspace{1.5pt}
 
-\projtitle{IK-Dron --- 5" FPV Racing Drone}
-\projtech{BetaFlight, SpeedyBee F405 V4}
-\projlink{https://github.com/IKGB105/IK-Dron}{IKGB105/IK-Dron}
-\projdesc{Team project: diagnosed and flew a 5" racing drone after its flight controller suffered an unrecoverable hardware failure. Migrated to a SpeedyBee F405 V4 stack on BetaFlight, then root-caused a takeoff failure via the CLI to a propeller/motor-rotation mismatch tripping BetaFlight's runaway-takeoff protection.}
+\projtitle{Hot-Swap eFuse (LTC4215) --- SPICE, PCB \& Thermal FEM}
+\projtech{LTspice, KiCad, COMSOL Multiphysics}
+\projlink{https://github.com/IKGB105/EFUSE-LTC4215-HotSwap}{IKGB105/EFUSE-LTC4215-HotSwap}
+\projdesc{12V hot-swap/eFuse front-end: controlled inrush, latching overcurrent shutdown, and auto-retry undervoltage lockout, validated in LTspice against the IC's internal startup-delay behavior. A coupled electrical-thermal COMSOL model found the copper pours themselves were the dominant heat source at the rated 15A, driving a lower, thermally-safe continuous-current recommendation.}
 
 % ---------------- LANGUAGES ----------------
 \cvsection{Languages}
